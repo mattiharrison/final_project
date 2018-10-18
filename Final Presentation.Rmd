@@ -22,12 +22,6 @@ Oregon <- read_csv("Oregon- Data USA Cart.csv")
 Wake_Forest <- read_csv("Wake Forest- Data USA Cart.csv")
 ```
 
-
-```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
-Harvard %>% 
-  ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10()
-```
-
 ##Does it matter if you choose a Private or Public University?
 I want to compare the top public and private Universities to see if there is a difference in average earnings after graduation.  For my initial comparisons I will see the differences in tuition vs. debt ratio.  Then I will continue on to the most common major for each school, this usually predicts the wage.  Then I will compare the average earnings between the different schools.  
 
@@ -38,6 +32,11 @@ I am not sure if there is a way to get data from all public/private universities
 private- (1) Harvard (50) Wake Forest University
 
 public- (1) UC Berkeley (50) University of Oregon
+
+```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
+Harvard %>% 
+  ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10()
+```
 
 ```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
 summary(Harvard)
