@@ -2,9 +2,7 @@
 title: "Final Project"
 author: "Matti Harrison"
 date: "10/18/2018"
-output:
-  pdf_document: default
-  html_document: default
+output:html_document
 ---
 
 ```{r setup, include=FALSE}
