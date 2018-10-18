@@ -2,7 +2,9 @@
 title: "Final Project"
 author: "Matti Harrison"
 date: "10/18/2018"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -22,8 +24,6 @@ Wake_Forest <- read_csv("Wake Forest- Data USA Cart.csv")
 
 
 ```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
-summary(Harvard) 
-
 Harvard %>% 
   ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10()
 ```
@@ -39,6 +39,9 @@ private- (1) Harvard (50) Wake Forest University
 
 public- (1) UC Berkeley (50) University of Oregon
 
+```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
+summary(Harvard)
+```
 
 
 
