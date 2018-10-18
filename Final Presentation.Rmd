@@ -9,22 +9,17 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+##Does it matter if you choose a Private or Public University?
+I want to compare the top public and private Universities to see if there is a difference in average earnings after graduation.  For my initial comparisons I will see the differences in tuition vs. debt ratio.  Then I will continue on to the most common major for each school, this usually predicts the wage.  Then I will compare the average earnings between the different schools.  
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+I originally wanted to get the #1 private/public university and then also the #50 school for each to be able to standardize.  #1 schools are in the top for overall school so #50 will be able to see a clear difference.
+ 
+I am not sure if there is a way to get data from all public/private universities into 1 dataset.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+private- (1) Harvard (50) Wake Forest University
 
-```{r cars}
-summary(cars)
-```
+public- (1) UC Berkeley (50) University of Oregon
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
