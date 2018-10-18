@@ -7,14 +7,33 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(dplyr)
+library(janitor)
+
+Harvard <- read_csv("Harvard- Data USA Cart.csv")
+
+Berkeley <- read_csv("Berkeley- Data USA Cart.csv")
+
+Oregon <- read_csv("Oregon- Data USA Cart.csv")
+
+Wake_Forest <- read_csv("Wake Forest- Data USA Cart.csv")
+```
+
+
+```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
+summary(Harvard) 
+
+Harvard %>% 
+  ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10()
 ```
 
 ##Does it matter if you choose a Private or Public University?
 I want to compare the top public and private Universities to see if there is a difference in average earnings after graduation.  For my initial comparisons I will see the differences in tuition vs. debt ratio.  Then I will continue on to the most common major for each school, this usually predicts the wage.  Then I will compare the average earnings between the different schools.  
 
-I originally wanted to get the #1 private/public university and then also the #50 school for each to be able to standardize.  #1 schools are in the top for overall school so #50 will be able to see a clear difference.
+I originally wanted to get the #1 private/public university and then also the #50 school for each to be able to standardize.  #1 schools are in the top for overall school so #50 will be able to see a clear difference.  I got the original data from Data USA.
  
-I am not sure if there is a way to get data from all public/private universities into 1 dataset.
+I am not sure if there is a way to get data from all public/private universities into 1 dataset.  
 
 private- (1) Harvard (50) Wake Forest University
 
