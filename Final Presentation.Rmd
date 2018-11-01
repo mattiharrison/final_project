@@ -13,9 +13,9 @@ library(tidyverse)
 library(dplyr)
 library(janitor)
 
-Harvard <- read_csv("../Harvard- Data USA Cart.csv")
+Harvard <- read_csv("Harvard- Data USA Cart.csv")
 
-Berkeley <- read_csv("../Berkeley- Data USA Cart.csv")
+Berkeley <- read_csv("Berkeley- Data USA Cart.csv")
 
 Oregon <- read_csv("Oregon- Data USA Cart.csv")
 
