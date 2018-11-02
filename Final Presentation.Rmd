@@ -13,9 +13,9 @@ library(tidyverse)
 library(dplyr)
 library(janitor)
 
-Harvard <- read_csv("Harvard- Data USA Cart.csv")
+Harvard <- read_csv("../Harvard- Data USA Cart.csv")
 
-Berkeley <- read_csv("Berkeley- Data USA Cart.csv")
+Berkeley <- read_csv("../Berkeley- Data USA Cart.csv")
 
 Oregon <- read_csv("Oregon- Data USA Cart.csv")
 
@@ -33,22 +33,23 @@ private- (1) Harvard (50) Wake Forest University
 
 public- (1) UC Berkeley (50) University of Oregon
 
+
 ```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
-Harvard %>% 
-  select(soc_name, cip_name, cip_id, avg_wage_2014, avg_wage_2015,
-         avg_wage_2016, num_ppl_2014, num_ppl_2015, num_ppl_2016) %>% 
-  ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10() + labs(title = "Harvard, Average Wage vs. Number of People", subtitle = "2014", x= "Wage", y= "Enrolled Students")
-```
-
-
-```{r}
 Harvard_clean <- Harvard %>% 
   select(soc_id, cip_name, avg_wage_2014, avg_wage_2015, avg_wage_2016,
          num_ppl_2014, num_ppl_2015, num_ppl_2016)
+
 Berkeley_clean <- Berkeley %>% 
    select(soc_id, cip_name, avg_wage_2014, avg_wage_2015, avg_wage_2016,
          num_ppl_2014, num_ppl_2015, num_ppl_2016)
 ```
+
+```{r}
+Harvard_clean %>% 
+  ggplot(aes(x=avg_wage_2014, y= num_ppl_2014)) + geom_point() + scale_y_log10() + labs(title = "Harvard, Average Wage vs. Number of People", subtitle = "2014", x= "Wage", y= "Enrolled Students")
+
+```
+
 
 ```{r, echo=FALSE, warning= FALSE, error= FALSE, message= FALSE}
 Berkeley %>% 
